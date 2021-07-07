@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://_debug/DebugLayer.gd" type="Script" id=1]
+[ext_resource path="res://_debug/widgets/TextList/DebugTextList.tscn" type="PackedScene" id=2]
 
 [node name="DebugLayer" type="CanvasLayer"]
 layer = 128
@@ -13,11 +14,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="DebugUIContainer"]
-margin_top = 13.0
-margin_right = 314.0
-margin_bottom = 27.0
-text = "This is a test of the emergency broadcast system"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TextList1" parent="DebugUIContainer" instance=ExtResource( 2 )]
