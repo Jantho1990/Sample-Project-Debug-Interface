@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "MarginContainer",
+"class": "DebugContainer",
+"language": "GDScript",
+"path": "res://_debug/DebugContainer.gd"
+}, {
+"base": "MarginContainer",
 "class": "DebugWidget",
 "language": "GDScript",
 "path": "res://_debug/widgets/DebugWidget.gd"
 } ]
 _global_script_class_icons={
+"DebugContainer": "",
 "DebugWidget": ""
 }
 

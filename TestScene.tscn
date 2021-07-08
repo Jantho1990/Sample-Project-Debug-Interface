@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://TestScene.gd" type="Script" id=1]
+[ext_resource path="res://_debug/widgets/TextList/DebugTextList.tscn" type="PackedScene" id=2]
+[ext_resource path="res://_debug/DebugContainer.gd" type="Script" id=3]
+[ext_resource path="res://TestChild.tscn" type="PackedScene" id=4]
 
 [node name="TestScene" type="Node"]
 script = ExtResource( 1 )
@@ -9,3 +12,15 @@ script = ExtResource( 1 )
 position = Vector2( 487, 275 )
 points = PoolVector2Array( -25, 0, 25, 0 )
 default_color = Color( 1, 0, 0, 1 )
+
+[node name="TestDebugContainer" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextList1" parent="TestDebugContainer" instance=ExtResource( 2 )]
+
+[node name="TestChild" parent="." instance=ExtResource( 4 )]

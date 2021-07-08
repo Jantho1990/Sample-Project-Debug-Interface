@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://_debug/widgets/TextList/DebugTextList.tscn" type="PackedScene" id=1]
+[ext_resource path="res://_debug/DebugContainer.gd" type="Script" id=2]
+
+[node name="TestChild" type="Node"]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 376.0
+margin_top = 113.0
+margin_right = 462.0
+margin_bottom = 133.0
+text = "Test Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TestDebugContainer2" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextList1" parent="TestDebugContainer2" instance=ExtResource( 1 )]

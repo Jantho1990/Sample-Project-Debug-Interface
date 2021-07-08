@@ -1,17 +1,31 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://_debug/DebugLayer.gd" type="Script" id=1]
-[ext_resource path="res://_debug/widgets/TextList/DebugTextList.tscn" type="PackedScene" id=2]
 
 [node name="DebugLayer" type="CanvasLayer"]
 layer = 128
 script = ExtResource( 1 )
 
 [node name="DebugUIContainer" type="MarginContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextList1" parent="DebugUIContainer" instance=ExtResource( 2 )]
+[node name="VBoxContainer" type="VBoxContainer" parent="DebugUIContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 2
+
+[node name="DebugTabs" type="Tabs" parent="DebugUIContainer/VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 24.0
+tab_align = 0
+
+[node name="DebugContentContainer" type="MarginContainer" parent="DebugUIContainer/VBoxContainer"]
+margin_top = 28.0
+margin_right = 1024.0
+margin_bottom = 28.0
+mouse_filter = 2
